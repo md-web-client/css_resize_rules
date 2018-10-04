@@ -2,13 +2,32 @@
 <html>
 <head>
 <style>
+  html       { font-size: 3vmin; }
   *          { padding: 0; margin: 0; font-size: 16px; }
-  .largeFont { font-size: 32px; }
+  .largeFont { font-size: 32px;  }
 
   html       { font-size: 3vmin; }
-  h1         { font-size: 3rem; }
-  
+  h1         { font-size: 3rem;  }
+  /* below does not work but it would be nice if possible 
+    h1       { font-size: var(.largeFont.font-size); }
+    h1       { font-size: var(.largeFont.height); }
+  */
+  /* another option, change properties by getting and setting with javascript
+
+    const header = document.getElementsByClassName('h')
+    form[0].setAttribute('style', 'display: none;')
+    
+    var myElements = document.querySelectorAll("p");
+ 
+    for (var i = 0; i < myElements.length; i++) {
+        myElements[i].style.color = "blue";
+    }
+  */
 </style>
+<!--
+  https://www.w3schools.com/cssref/css_units.asp
+
+-->
 <!-- rules  
   px stuff at the top...
   html -root font size should be vmin off port size.
